@@ -9,7 +9,7 @@ const [nota2, setNota2] = useState(null)
 const [nota3, setNota3] = useState(null)
 const [messageMedia, setMessageMedia] = useState("preencha com suas notas")
 const [media, setMedia] = useState(null)
-const [textButton, setTextButton] = useState("Calcular")
+const [textButton, setTextButton] = useState("Calcular Média")
 
 function mediaCalculator(){
     return setMedia (((parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) /3 ).toFixed(2))
@@ -25,6 +25,7 @@ function validationMedia(){
         setTextButton("Calcular Novamente")
         return
     }
+
     setMedia(null)
     setTextButton("Calcular")
     setMessageMedia("preencha com suas notas")
@@ -59,7 +60,7 @@ function validationMedia(){
                 />
                 <Button
                 onPress={() => validationMedia()} 
-                title="Calcular Média"
+                title={textButton}
                 />
             </View>
             <ResultMedia messageResultMedia={messageMedia} ResultMedia={media} />
