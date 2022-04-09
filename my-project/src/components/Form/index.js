@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import { View, Text, TextInput, Button } from "react-native";
 import ResultMedia from "./ResultMedia/";
-import ResultIntervalo from "./ResultIntervalo/";
 
 export default function Main (){
 
@@ -10,11 +9,6 @@ const [nota2, setNota2] = useState(null)
 const [nota3, setNota3] = useState(null)
 const [messageMedia, setMessageMedia] = useState("preencha com suas notas")
 const [media, setMedia] = useState(null)
-const [valor1, setValor1] = useState(null)
-const [valor2, setValor2] = useState(null)
-const [valor3, setValor3] = useState(null)
-const [messageIntervalo, setMessageIntervalo] = useState("preencha os valores")
-const [intervalo, setIntervalo] = useState(null)
 const [textButton, setTextButton] = useState("Calcular")
 
 function mediaCalculator(){
@@ -34,25 +28,6 @@ function validationMedia(){
     setMedia(null)
     setTextButton("Calcular")
     setMessageMedia("preencha com suas notas")
-}
-
-function intervaloCalculator(){
-    return setMedia((valor1+valor2+valor3/(3)) .toFixed(2))
-}
-  
-function validationValor(){
-    if(valor1 != null && valor2 != null && valor3 != null){
-        mediaCalculator()
-        setValor1(null)
-        setValor2(null)
-        setValor3(null)
-        setMessageMedia("Sua média é igual:")
-        setTextButton("Calcular Novamente")
-        return
-    }
-    setIntervalo(null)
-    setTextButton("Calcular")
-    SetMessageIms("preencha com seus valores")
 }
 
     return(
@@ -79,23 +54,6 @@ function validationValor(){
                 <Button title="Calcular Média"/>
             </View>
             <ResultMedia messageResultMedia={messageMedia} ResultMedia={media} />
-            <View>
-                <Text>Intervalo de Valores</Text>
             </View>
-            <View>
-                <Text>Valor 2</Text>
-                <TextInput
-                placeholder="Ex. 7.5"
-                keyboardType="numeric"
-                />
-                <Text>Valor 1</Text>
-                <TextInput
-                placeholder="Ex. 7.5"
-                keyboardType="numeric"
-                />
-                <Button title="Verificar Intevalo"/>
-            </View>
-            <ResultIntevalo messageResultMedia={messageIntervalo} ResultMedia={intervalo} />
-        </View>
     );
 }
