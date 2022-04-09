@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput, Button } from "react-native";
 
 export default function Main (){
     return(
@@ -23,7 +23,9 @@ export default function Main (){
                 placeholder="Ex. 7.5"
                 keyboardType="numeric"
                 />
+                <Button title="Calcular Média"/>
             </View>
+            <ResultMedia messageResultMedia={messageMedia} ResultMedia={media} />
             <View>
                 <Text>Intervalo de Valores</Text>
             </View>
@@ -38,7 +40,9 @@ export default function Main (){
                 placeholder="Ex. 7.5"
                 keyboardType="numeric"
                 />
+                <Button title="Verificar Intevalo"/>
             </View>
+            <ResultIntevalo messageResultMedia={messageIntervalo} ResultMedia={intervalo} />
         </View>
     );
 }
