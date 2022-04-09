@@ -9,7 +9,7 @@ const [valor2, setValor2] = useState(null)
 const [valor3, setValor3] = useState(null)
 const [messageIntervalo, setMessageIntervalo] = useState("preencha com seus valores")
 const [intervalo, setIntervalo] = useState(null)
-const [textButton, setTextButton] = useState("Calcular")
+const [textButton, setTextButton] = useState("Verificar Intervalos")
 
 
 function intervaloCalculator(){
