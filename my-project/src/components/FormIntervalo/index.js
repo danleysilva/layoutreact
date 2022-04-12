@@ -33,7 +33,7 @@ function validationIntervalo(){
 }
 
     return(
-        <View style={styles.formContext}>
+        <View>
             <View style={styles.form}>
             <Text style={styles.formLabelTitle}>Verificar Intervalos</Text>
                 <Text style={styles.formLabel}>Valor 1</Text>

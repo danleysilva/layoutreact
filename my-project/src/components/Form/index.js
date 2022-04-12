@@ -33,7 +33,7 @@ function validationMedia(){
 }
 
     return(
-        <View style={styles.formContext}>
+        <View>
             <View style={styles.form}>
                 <Text style={styles.formLabelTitle}>Calculadora de Média</Text>
             </View>
