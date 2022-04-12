@@ -4,16 +4,18 @@ import styles from "./style";
 
 export default function ResultMedia (props){
     return(
-        <View style={styles.resultMedia}>
+        <View>
             <Text style={styles.information}>{props.messageResultMedia}</Text>
            {/* <Text style={styles.numberMedia}>{props.ResultMedia}</Text> */} 
             {props.ResultMedia > 0 && props.ResultMedia < 5 ? (
-            <Text>{props.ResultMedia} <br></br>Reprovado</Text>
+            <Text style={styles.informationFailed}>{props.ResultMedia} - Reprovado</Text>
     ) : props.ResultMedia >= 5 && props.ResultMedia < 7 ? (
-            <Text>{props.ResultMedia}<br></br> Recuperação</Text>
+            <Text style={styles.informationRestoration}>{props.ResultMedia} - Recuperação</Text>
     ) : props.ResultMedia >= 7 ? (
-            <Text>{props.ResultMedia}<br></br> Aprovado</Text>
-    ) : (
+            <Text style={styles.informationAproved}>{props.ResultMedia} - Aprovado</Text>
+    ) : props.ResultMedia == 0 ? (
+        <Text style={styles.informationFailed}>{props.ResultMedia} - Reprovado</Text>
+) :( 
             <Text ></Text>
     )}
 

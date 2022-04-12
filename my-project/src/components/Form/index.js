@@ -8,7 +8,7 @@ export default function Main (){
 const [nota1, setNota1] = useState(null)
 const [nota2, setNota2] = useState(null)
 const [nota3, setNota3] = useState(null)
-const [messageMedia, setMessageMedia] = useState("preencha com suas notas")
+const [messageMedia, setMessageMedia] = useState("Informe suas notas")
 const [media, setMedia] = useState(null)
 const [textButton, setTextButton] = useState("Calcular Média")
 
@@ -29,7 +29,7 @@ function validationMedia(){
 
     setMedia(null)
     setTextButton("Calcular")
-    setMessageMedia("preencha com suas notas")
+    setMessageMedia("Informe suas notas")
 }
 
     return(

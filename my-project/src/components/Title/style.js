@@ -7,10 +7,12 @@ const styles = StyleSheet.create({
         padding:10,    
     },
     textTitle:{
-        color:"#FF0043",
-        fontSize:24,
+        paddingTop:40,
+        color:"#000000",
+        fontSize:28,
         fontWeight:"bold",
         height:100,
+        textAlign: "center",
     },
 
     gradientTitle:{
