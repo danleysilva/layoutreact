@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
     buttonCalculator:{
         borderRadius:50,
-        color:"ffffff",
+        color:"#ffffff",
         alignItems:"center",
         justifyContent:"center",
         width:"100%",

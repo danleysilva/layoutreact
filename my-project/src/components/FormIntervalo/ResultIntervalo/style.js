@@ -4,9 +4,9 @@ const styles = StyleSheet.create({
     resultIntervalo:{
         flex:1,
         marginTop:15,
-        paddingTop:60,
+        paddingTop:5,
         borderRadius:50,
-        alignItem:"center",
+        alignItems:"center",
         width:"100%",
     },
 

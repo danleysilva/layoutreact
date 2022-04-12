@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         borderTopLeftRadius:30,
         borderTopRightRadius:30,
         marginTop:"30",
-        alignItems:"center",
+
     },
     
     form:{
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 
     buttonCalculator:{
         borderRadius:50,
-        color:"ffffff",
+        color:"#ffffff",
         alignItems:"center",
         justifyContent:"center",
         width:"70%",
