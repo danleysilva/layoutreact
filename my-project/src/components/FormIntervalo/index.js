@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import ResultIntervalo from "./ResultIntervalo/";
+import styles from "./style"
 
 export default function Main (){
 
@@ -32,33 +33,41 @@ function validationIntervalo(){
 }
 
     return(
-        <View>
-            <View>
-                <Text>Valor 1</Text>
+        <View style={styles.formContext}>
+            <View style={styles.form}>
+            <Text style={styles.formLabelTitle}>Verificar Intervalos</Text>
+                <Text style={styles.formLabel}>Valor 1</Text>
                 <TextInput
+                style={styles.input}
                 onChangeText={setValor1}
                 value={valor1}
                 placeholder="Ex. 7"
                 keyboardType="numeric"
                 />
-                <Text>Valor 2</Text>
+                <Text style={styles.formLabel}>Valor 2</Text>
                 <TextInput
+                style={styles.input}
                 onChangeText={setValor2}
                 value={valor2}
                 placeholder="Ex. 7"
                 keyboardType="numeric"
                 />
-                <Text>Valor 3</Text>
+                <Text style={styles.formLabel}>Valor 3</Text>
                 <TextInput
+                style={styles.input}
                 onChangeText={setValor3}
                 value={valor3}
                 placeholder="Ex. 7"
                 keyboardType="numeric"
                 />
-                <Button
-                onPress={() => validationIntervalo()} 
-                title={textButton}
-                />
+                <TouchableOpacity
+             style={styles.buttonCalculator}
+             onPress={() => {
+                validationIntervalo()
+             }}
+             >
+                 <Text style={styles.textButtonCalculator}>{textButton}</Text>
+            </TouchableOpacity>   
             </View>
             <ResultIntervalo messageResultIntervalo={messageIntervalo} ResultIntervalo={intervalo} />
             </View>

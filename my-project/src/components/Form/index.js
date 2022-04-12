@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import { View, Text, TextInput, Button } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import ResultMedia from "./ResultMedia/";
+import styles from "./style"
 
 export default function Main (){
 
@@ -32,36 +33,43 @@ function validationMedia(){
 }
 
     return(
-        <View>
-            <View>
-                <Text>Calculadora de Média</Text>
+        <View style={styles.formContext}>
+            <View style={styles.form}>
+                <Text style={styles.formLabelTitle}>Calculadora de Média</Text>
             </View>
             <View>
-                <Text>Nota 1</Text>
+                <Text style={styles.formLabel}>Nota 1</Text>
                 <TextInput
+                style={styles.input}
                 onChangeText={setNota1}
                 value={nota1}
                 placeholder="Ex. 7.5"
                 keyboardType="numeric"
                 />
-                <Text>Nota 2</Text>
+                <Text style={styles.formLabel}>Nota 2</Text>
                 <TextInput
+                style={styles.input}
                 onChangeText={setNota2}
                 value={nota2}
                 placeholder="Ex. 7.5"
                 keyboardType="numeric"
                 />
-                <Text>Nota 3</Text>
+                <Text style={styles.formLabel}>Nota 3</Text>
                 <TextInput
+                style={styles.input}
                 onChangeText={setNota3}
                 value={nota3}
                 placeholder="Ex. 7.5"
                 keyboardType="numeric"
                 />
-                <Button
-                onPress={() => validationMedia()} 
-                title={textButton}
-                />
+             <TouchableOpacity
+             style={styles.buttonCalculator}
+             onPress={() => {
+                validationMedia()
+             }}
+             >
+                 <Text style={styles.textButtonCalculator}>{textButton}</Text>
+            </TouchableOpacity>   
             </View>
             <ResultMedia messageResultMedia={messageMedia} ResultMedia={media} />
             </View>

@@ -4,6 +4,7 @@ import Form from './src/components/Form/';
 import FormIntervalo from './src/components/FormIntervalo/';
 
 
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -18,6 +19,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#e0e5e5',
-    paddingTop:80,
+    paddingTop:80,  
   },
 });
