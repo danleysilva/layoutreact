@@ -23,7 +23,7 @@ function validationMedia(){
         setNota2(null)
         setNota3(null)
         setMessageMedia("Sua média é igual:")
-        setTextButton("Calcular Novamente")
+        setTextButton("Calcular Média")
         return
     }
 
