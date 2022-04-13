@@ -4,16 +4,16 @@ const styles = StyleSheet.create({
     boxTitle:{
         alignItems:"center",
         justifyContent:"center",
-        padding:10,    
+        padding:12,    
     },
     textTitle:{
-        paddingTop:40,
+        paddingTop:35,
         color:"#000000",
         fontSize:28,
         fontWeight:"bold",
-        height:100,
+        height:80,
         textAlign: "center",
-    },
+        elevation: 2, shadowColor:"#000000"},
 
     gradientTitle:{
         height:100,

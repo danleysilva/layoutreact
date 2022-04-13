@@ -8,7 +8,7 @@ export default function Main (){
 const [valor1, setValor1] = useState(null)
 const [valor2, setValor2] = useState(null)
 const [valor3, setValor3] = useState(null)
-const [messageIntervalo, setMessageIntervalo] = useState("preencha com seus valores")
+const [messageIntervalo, setMessageIntervalo] = useState("Informe os valores acima")
 const [intervalo, setIntervalo] = useState(null)
 const [textButton, setTextButton] = useState("Verificar Intervalos")
 
@@ -29,7 +29,7 @@ function validationIntervalo(){
     }
     setIntervalo(null)
     setTextButton("Verificar")
-    setMessageMedia("preencha com os valores")
+    setMessageMedia("Informe os valores acima")
 }
 
     return(

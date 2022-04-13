@@ -6,42 +6,42 @@ const styles = StyleSheet.create({
         height:"50%%",
         bottom:0,
         backgroundColor:"#ffffff",
+        alignItems:"center",
         borderTopLeftRadius:30,
         borderTopRightRadius:30,
         marginTop:"30",
-
     },
     
     form:{
         width: "100%",
         height:"auto",
-        marginTop:30,
-        padding: 10,
+        marginTop:5,
+        padding: 5,
     },
 
     formLabelTitle:{
         color:"#000000",
-        fontSize:18,
+        fontSize:14,
+        paddingVertical:8,
         textAlign: "center",
         fontWeight: "bold"
     },
     
     formLabel:{
         color:"#000000",
-        fontSize:14,
-        paddingLeft:18,
+        fontSize:12,
+        paddingLeft:100,
         fontWeight: "bold",
-        marginLeft:100,
     },
 
     input:{
         width:"60%",
         borderRadius:50,
         backgroundColor: "#f6f6f6",
-        height:40,
-        margin:12,
+        height:30,
+        margin:5,
         paddingLeft:18,
-        marginLeft:100,
+        marginLeft:"20%",
     },
 
     buttonCalculator:{
@@ -49,18 +49,19 @@ const styles = StyleSheet.create({
         color:"#ffffff",
         alignItems:"center",
         justifyContent:"center",
-        width:"70%",
+        width:"60%",
         backgroundColor:"#FF7F00",
-        paddingTop:14,
-        paddingBottom:14,
-        marginTop:30,
-        marginLeft:75,
+        height:35,
+        paddingTop:0,
+        marginTop:10,
+        marginLeft:"20%",
     },
 
     textButtonCalculator:{
-       fontSize: 20,
+       fontSize: 18,
        color: "#ffffff",
     },
+
 
 });
 

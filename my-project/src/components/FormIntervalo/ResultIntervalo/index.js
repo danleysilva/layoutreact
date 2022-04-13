@@ -4,7 +4,7 @@ import styles from "./style";
 
 export default function ResultIntervalo (props){
     return(
-        <View style={styles.resultIntervalo}>
+        <View>
             <Text style={styles.information}>{props.messageResultIntervalo}</Text>
             <Text style={styles.numberIntervalo}>{props.ResultIntervalo}</Text>
             {props.ResultIntervalo > 0 && props.ResultIntervalo <= 10 ? (

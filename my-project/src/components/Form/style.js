@@ -48,12 +48,12 @@ const styles = StyleSheet.create({
         color:"#ffffff",
         alignItems:"center",
         justifyContent:"center",
-        width:"50%",
+        width:"60%",
         backgroundColor:"#FF7F00",
-        height:30,
+        height:35,
         paddingTop:0,
         marginTop:10,
-        marginLeft:"25%",
+        marginLeft:"20%",
     },
 
     textButtonCalculator:{
