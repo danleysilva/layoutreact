@@ -22,7 +22,13 @@ const styles = StyleSheet.create({
         textAlign:"center",
         color:"#000000",
         fontWeight:"bold",  
+    },
 
+    informationSucess:{
+        fontSize:14,
+        textAlign:"center",
+        color:"#FF7F00",
+        fontWeight:"bold",  
     },
 
 });

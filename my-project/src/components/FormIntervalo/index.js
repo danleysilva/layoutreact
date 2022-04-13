@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from "react-native";
 import ResultIntervalo from "./ResultIntervalo/";
 import styles from "./style"
 
@@ -10,7 +10,7 @@ const [valor2, setValor2] = useState(null)
 const [valor3, setValor3] = useState(null)
 const [messageIntervalo, setMessageIntervalo] = useState("Informe os valores acima")
 const [intervalo, setIntervalo] = useState(null)
-const [textButton, setTextButton] = useState("Verificar Intervalos")
+const [textButton, setTextButton] = useState("Verificar Intervalo")
 
 
 function intervaloCalculator(){
@@ -24,17 +24,17 @@ function validationIntervalo(){
         setValor2(null)
         setValor3(null)
         setMessageIntervalo("Seu intervalo é:")
-        setTextButton("Verificar Novamente")
+        setTextButton("Verificar Intervalo")
         return
     }
     setIntervalo(null)
-    setTextButton("Verificar")
+    setTextButton("Verificar Intervalo")
     setMessageIntervalo("Informe os valores acima")
 }
 
     return(
         <View>
-            <View style={styles.form}>
+            <ScrollView style={styles.form}>
             <Text style={styles.formLabelTitle}>Verificar Intervalos</Text>
                 <Text style={styles.formLabel}>Valor 1</Text>
                 <TextInput
@@ -68,7 +68,7 @@ function validationIntervalo(){
              >
                  <Text style={styles.textButtonCalculator}>{textButton}</Text>
             </TouchableOpacity>   
-            </View>
+            </ScrollView>
             <ResultIntervalo messageResultIntervalo={messageIntervalo} ResultIntervalo={intervalo} />
             </View>
     );

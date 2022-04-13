@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, ScrollView } from "react-native";
 import ResultMedia from "./ResultMedia/";
 import styles from "./style"
 
@@ -8,7 +8,7 @@ export default function Main (){
 const [nota1, setNota1] = useState(null)
 const [nota2, setNota2] = useState(null)
 const [nota3, setNota3] = useState(null)
-const [messageMedia, setMessageMedia] = useState("Informe suas notas")
+const [messageMedia, setMessageMedia] = useState("Informe suas notas acima")
 const [media, setMedia] = useState(null)
 const [textButton, setTextButton] = useState("Calcular Média")
 
@@ -28,7 +28,7 @@ function validationMedia(){
     }
 
     setMedia(null)
-    setTextButton("Calcular")
+    setTextButton("Calcular Média")
     setMessageMedia("Informe suas notas")
 }
 
@@ -37,7 +37,7 @@ function validationMedia(){
             <View style={styles.form}>
                 <Text style={styles.formLabelTitle}>Calculadora de Média</Text>
             </View>
-            <View>
+            <ScrollView>
                 <Text style={styles.formLabel}>Nota 1</Text>
                 <TextInput
                 style={styles.input}
@@ -70,7 +70,7 @@ function validationMedia(){
              >
                  <Text style={styles.textButtonCalculator}>{textButton}</Text>
             </TouchableOpacity>   
-            </View>
+            </ScrollView>
             <ResultMedia messageResultMedia={messageMedia} ResultMedia={media} />
             </View>
     );
