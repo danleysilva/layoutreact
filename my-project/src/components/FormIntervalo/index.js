@@ -29,7 +29,7 @@ function validationIntervalo(){
     }
     setIntervalo(null)
     setTextButton("Verificar")
-    setMessageMedia("Informe os valores acima")
+    setMessageIntervalo("Informe os valores acima")
 }
 
     return(

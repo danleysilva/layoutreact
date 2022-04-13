@@ -5,7 +5,7 @@ import styles from "./style";
 export default function ResultMedia (props){
     return(
         <View>
-            <Text style={styles.information}>{props.messageResultMedia}</Text>
+            <Text style={styles.information}>{props.messageResultIntervalo}</Text>
            {/* <Text style={styles.numberMedia}>{props.ResultMedia}</Text> */} 
             {props.ResultMedia > 0 && props.ResultMedia < 5 ? (
             <Text style={styles.informationFailed}>{props.ResultMedia} - Reprovado</Text>
